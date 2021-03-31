@@ -1,0 +1,18 @@
+<body>
+  <h1 id="name">{{name}}</h1>
+</body>
+<script src="./5_完善Dep.js"></script>
+<script src="./4_实现Watcher.js"></script>
+<script src="./6_设置关联.js"></script>
+<script type="text/javascript">
+  var ele = document.querySelector('#name');
+  var selfVue = new SelfVue({
+      name: 'hello world'
+  }, ele, 'name');
+
+  window.setTimeout(function () {
+      console.log('name值改变了');
+      selfVue.data.name = 'canfoo';
+  }, 2000);
+
+</script>
